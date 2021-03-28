@@ -42,8 +42,11 @@ class Image(models.Model):
       name = models.CharField(max_length =30)
       image_caption = HTMLField()
       post_date = models.DateTimeField(auto_now_add=True)
-      user = models.ForeignKey(User, blank=True,on_delete=models.CASCADE)
-      profile_details=models.ForeignKey(Profile)
+      user = models.ForeignKey(
+          'User',
+      on_delete=models.CASCADE,
+      )
+      profile_details=models.ForeignKey(Profile,on_delete=models.CASCADE)
       
 
       def __str__(self):
@@ -76,7 +79,7 @@ class Image(models.Model):
 class Comments(models.Model):
     comment=models.TextField(max_length=50)
     user=models.ForeignKey(User,on_delete=models.CASCADE)
-    image=models.ForeignKey(Image,blank=True)
+    image=models.ForeignKey(Image, blank=True,on_delete=models.CASCADE)
     def __str__(self):
         return self.comment
     

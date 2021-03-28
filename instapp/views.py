@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 import datetime as dt
 from django.contrib.auth.decorators import login_required
-from .models import Image, Profile,Comments,Likes
+from .models import Image, Profile,Comments
 from .forms import NewComment,NewImage,UpdateProfile
 from django.contrib.auth.models import User
 from django.http import Http404,HttpResponse,HttpResponseRedirect
