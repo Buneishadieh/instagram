@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'insta',
+    'instapp',
     'bootstrap4',
-    'crispy_forms',
-    'ckeditor',
+    'tinymce'
+    
 ]
 
 MIDDLEWARE = [
@@ -79,8 +79,10 @@ WSGI_APPLICATION = 'instagram_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instagram1',
+        'USER': 'postgres',
+        'PASSWORD': 'bunei',
     }
 }
 
@@ -109,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
