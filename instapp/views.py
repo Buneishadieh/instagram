@@ -13,9 +13,9 @@ def homepage (request):
     current_user = request.user
     all_images = Image.objects.all()
     comments = Comments.objects.all()
-    likes = Likes.objects.all()
+    # likes = Likes.objects.all()
     profile = Profile.objects.all()
-    print(likes)
+    # print(likes)
     return render(request,'home.html',locals())
 
 @login_required(login_url='/accounts/login')
@@ -56,9 +56,9 @@ def showprofile(request,username):
      except:
         profile_details = Profile.filter_by_id(profile.id)
         print(profile_details)
-     images = Image.profile_images(profile.id)
-     print(images)
-     return render(request, 'profile/profile.html', {'profile':profile, 'profile_details':profile_details, 'images':images})
+    #  images = Image.profile_images(profile.id)
+    #  print(images)
+     return render(request, 'profile/profile.html', {'profile':profile, 'profile_details':profile_details, })
 
 def search(request):
     profiles = User.objects.all()

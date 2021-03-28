@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     
     
 ]
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,8 +85,11 @@ DATABASES = {
         'NAME': 'instagram1',
         'USER': 'postgres',
         'PASSWORD': 'bunei',
+        'HOST': 'localhost', # the missing piece of the puzzle 
+        'PORT': '',
     }
 }
+
 
 
 # Password validation
