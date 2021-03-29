@@ -56,7 +56,7 @@ Django 3.7.1
 ## Live link
 
 Use this link to see the web-page
-https://git.heroku.com/appinsta12.git
+https://appinsta12.herokuapp.com/
 
 #### Known bugs
 none
